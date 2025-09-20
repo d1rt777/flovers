@@ -1,5 +1,3 @@
-const btnBuy = document.querySelectorAll('.btn-buy')
-
 const cardsData = [
   {
     image: "img/розы.webp",
@@ -40,7 +38,6 @@ const cardsData = [
     price: "12990 р + доставка 999 р",
   },
 ];
-
 
 function createCard(data) {
   const card = document.createElement("div");
@@ -91,7 +88,27 @@ function renderCards() {
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   renderCards();
+  const btnBuy = document.querySelectorAll(".btn-buy");
+  let summa = 0
+  btnBuy.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault()
+
+      const card = e.target.closest(".card");
+      const title = card.querySelector(".title").textContent;
+      const price = card.querySelector(".price").textContent;
+      summa += parseInt(price)
+      addFlowers({
+        title: title,
+        price: parseInt(price),
+        summa: summa
+      });
+    });
+  });
+
+  function addFlowers(flower) {
+    confirm(`Вы хотите купить букет: ${flower.title} за ${flower.price} Руб , общая сумма заказа ${summa}`);
+  }
 });
