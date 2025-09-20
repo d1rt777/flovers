@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 100px;
+}
+header {
+  width: 100%;
+  height: 60px;
+}
+
+main {
+  margin: 30px;
+}
+
+.card {
+  width: 25%;
+  box-shadow: rgba(191, 191, 191, 0.25) 0px 6px 12px -2px,
+    rgba(103, 103, 103, 0.1) 0px 3px 7px -3px;
+  border-radius: 12px;
+  height: 600px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.card-item,
+.btns {
+  padding: 0 15px;
+  margin-bottom: auto;
+}
+
+.card-item .title {
+  font-size: 18px;
+  font-family: 500;
+}
+
+.card-item .price {
+  font-size: 18px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.card-item .description {
+  color: rgb(59, 59, 59);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btns button {
+  padding: 10px 15px;
+  border: 1px solid rgb(84, 84, 84);
+  border-radius: 12px;
+  font-size: 14px;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-item {
+  margin: 10px;
+}
+
+.block-title {
+    font-size: 24px;
+    font-family: 600;
+}
+
+input {
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #191919;
+  border-radius: 5px;
+}
+
+.form-item label {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+textarea {
+  width: 400px;
+  border-radius: 5px;
+  height: 200px;
+  resize: none;
+  padding: 10px; 
+  border: 1px solid #ccc; 
+}
+
+form .btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #191919;
+    color: white;
+    align-items: center;
+    width: 150px;
+    border-radius: 8px;
+    
+}
