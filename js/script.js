@@ -1,3 +1,5 @@
+const btnBuy = document.querySelectorAll('.btn-buy')
+
 const cardsData = [
   {
     image: "img/розы.webp",
@@ -38,6 +40,7 @@ const cardsData = [
     price: "12990 р + доставка 999 р",
   },
 ];
+
 
 function createCard(data) {
   const card = document.createElement("div");
@@ -87,6 +90,7 @@ function renderCards() {
     cardsContainer.append(card);
   });
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCards();
